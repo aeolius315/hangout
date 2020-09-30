@@ -14,8 +14,6 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<<<<<<< HEAD
-=======
         <style>
             .home-body{
                 background-image: url("{{URL::asset('storage/images/bg1.jpg')}}");
@@ -34,16 +32,11 @@
                 padding: 10px;
             }
         </style>
->>>>>>> a423e430... To Do:
     </head>
     <body>
         <div id="app">
             @include('inc.navbar')
-<<<<<<< HEAD
-            <div class="container">
-=======
             <div class="container main">
->>>>>>> a423e430... To Do:
                 @include('inc.messages')
                 @yield('content')
             </div>

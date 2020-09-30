@@ -8,8 +8,6 @@
             {{Form::label('title', 'Title')}}
             {{Form::text('title', $event->title, ['class' => 'form-control', 'placeholder' => 'Title' ])}}
         </div>
-<<<<<<< HEAD
-=======
         <div class="row">
             <div class="form-group col">
                 {{Form::label('event_date', 'Date of Event')}}
@@ -30,20 +28,16 @@
                 {{Form::text('event_city', $event->event_city, ['class' => 'form-control', 'placeholder' => 'City' ])}}
             </div>
         </div>
->>>>>>> a423e430... To Do:
         <div class="form-group">
             {{Form::label('body', 'Body')}}
             {{Form::textarea('body', $event->body, ['class' => 'form-control', 'placeholder' => 'Body' ])}}
         </div>
-<<<<<<< HEAD
         {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
-=======
         <div class="form-group">
             {{Form::label('event_image', 'Select the file to upload. ')}}
             {{Form::open(array('url' => '/uploadfile','files'=>'true'))}}
             {{Form::file('event_image')}}
         </div>
         {{Form::submit('Submit', ['class' => 'mb-2 mt-2 btn btn-primary'])}}
->>>>>>> a423e430... To Do:
     {{ Form::close() }}
 @endsection

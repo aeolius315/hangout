@@ -1,13 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<<<<<<< HEAD
     <h1>Events</h1>
     @if (count($events) > 0)
         @foreach ($events as $event)
             <div class="list-group-item mb-1">
                 <h3><a href="/events/{{$event->id}}">{{$event->title}}</a></h3>
-=======
     <hr>
     {{ Form::open(array('url' => '/events', 'method' => 'GET')) }}
         <div class="row">
@@ -35,7 +33,6 @@
                 <h6 class="col pt-2"> {{$event->event_address}}, {{$event->event_city}} City</h6>
                 <h6 class="col pt-2"> {{$event->event_date}} {{$event->event_time}}</h6>
                 </div>
->>>>>>> a423e430... To Do:
                 <small> Created on {{$event->created_at}} by {{$event->user->name}}</small>
             </div>
         @endforeach
