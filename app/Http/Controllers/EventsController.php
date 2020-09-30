@@ -23,23 +23,15 @@ class EventsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-<<<<<<< HEAD
     public function index()
     {
         // $events = Event::orderBy('created_At','asc')->get();
-=======
-    public function index(Request $request)
-    {
->>>>>>> a423e430... To Do:
         $events = Event::orderBy('created_At','asc')->take(5)->get();
         // $events = Event::orderBy('created_At','asc')->paginate(5);
         return view('events.index')->with('events', $events);
     }
-<<<<<<< HEAD
 
-=======
     
->>>>>>> a423e430... To Do:
     /**
      * Show the form for creating a new resource.
      *
@@ -49,9 +41,7 @@ class EventsController extends Controller
     {
         return view('events.create');
     }
-<<<<<<< HEAD
 
-=======
     
     public function search(Request $request) 
     {
@@ -62,7 +52,6 @@ class EventsController extends Controller
         return view('events.index')->wth('event', $events);
     }
     
->>>>>>> a423e430... To Do:
     /**
      * Store a newly created resource in storage.
      *
@@ -73,23 +62,17 @@ class EventsController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-<<<<<<< HEAD
-            'body' => 'required'
-=======
             'body' => 'required',
             'event_date' => 'required',
             'event_time' => 'required',
             'event_address' => 'required',
             'event_city' => 'required'
->>>>>>> a423e430... To Do:
         ]);
 
         // Create Event
         $event = new Event;
         $event->title = $request->input('title');
         $event->body = $request->input('body');
-<<<<<<< HEAD
-=======
         $event->event_date = $request->input('event_date');
         $event->event_time = $request->input('event_time');
         $event->event_address = $request->input('event_address');
@@ -123,7 +106,6 @@ class EventsController extends Controller
 
             
         $event->event_image = $request->input('event_image');
->>>>>>> a423e430... To Do:
         $event->user_id = auth()->user()->id;
 
         $event->save();
@@ -167,37 +149,27 @@ class EventsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-<<<<<<< HEAD
-=======
 
->>>>>>> a423e430... To Do:
     public function update(Request $request, $id)
     {
         $this->validate($request, [
             'title' => 'required',
-<<<<<<< HEAD
-            'body' => 'required'
-=======
             'body' => 'required',
             'event_date' => 'required',
             'event_time' => 'required',
             'event_address' => 'required',
             'event_city' => 'required'
->>>>>>> a423e430... To Do:
         ]);
 
         // Update Event
         $event = Event::find($id);
         $event->title = $request->input('title');
         $event->body = $request->input('body');
-<<<<<<< HEAD
-=======
         $event->event_date = $request->input('event_date');
         $event->event_time = $request->input('event_time');
         $event->event_address = $request->input('event_address');
         $event->event_city = $request->input('event_city');
         $event->event_image = $request->input('event_image');
->>>>>>> a423e430... To Do:
 
         $event->save();
 
