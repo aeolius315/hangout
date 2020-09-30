@@ -14,11 +14,36 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<<<<<<< HEAD
+=======
+        <style>
+            .home-body{
+                background-image: url("{{URL::asset('storage/images/bg1.jpg')}}");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .welcome{
+                padding: 200px 0;
+                text-align: center; 
+            }
+            .welcome-message{
+                text-shadow: 2px 2px #000000;
+            }
+            a.btn-lg{
+                width: 15%;
+                padding: 10px;
+            }
+        </style>
+>>>>>>> a423e430... To Do:
     </head>
     <body>
         <div id="app">
             @include('inc.navbar')
+<<<<<<< HEAD
             <div class="container">
+=======
+            <div class="container main">
+>>>>>>> a423e430... To Do:
                 @include('inc.messages')
                 @yield('content')
             </div>

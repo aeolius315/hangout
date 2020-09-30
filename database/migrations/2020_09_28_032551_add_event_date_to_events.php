@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddUserIdToEvents extends Migration
+class AddEventDateToEvents extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class AddUserIdToEvents extends Migration
      */
     public function up()
     {
-<<<<<<< HEAD
-        Schema::table('events', function ($table) {
-=======
         Schema::table('events', function (Blueprint $table) {
->>>>>>> a423e430... To Do:
-            $table->integer('user_id');
+            $table->date('event_date', 0);
         });
     }
 
@@ -29,12 +25,8 @@ class AddUserIdToEvents extends Migration
      */
     public function down()
     {
-<<<<<<< HEAD
-        Schema::table('events', function ($table) {
-=======
         Schema::table('events', function (Blueprint $table) {
->>>>>>> a423e430... To Do:
-            $table->dropColumn('user_id');
+            $table->dropColumn('event_date');
         });
     }
 }

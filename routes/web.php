@@ -28,3 +28,8 @@ Route::resource('/events', EventsController::class);
 Auth::routes();
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
+<<<<<<< HEAD
+=======
+
+// Route::get('/events', 'EventsController@search'); ??
+>>>>>>> a423e430... To Do:
