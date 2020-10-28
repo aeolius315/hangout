@@ -13,7 +13,7 @@ class AddUserIdToEvents extends Migration
      */
     public function up()
     {
-        Schema::table('events', function ($table) {
+        Schema::table('events', function (Blueprint $table) {
             $table->integer('user_id');
         });
     }
@@ -25,7 +25,7 @@ class AddUserIdToEvents extends Migration
      */
     public function down()
     {
-        Schema::table('events', function ($table) {
+        Schema::table('events', function (Blueprint $table) {
             $table->dropColumn('user_id');
         });
     }

@@ -23,14 +23,12 @@ class EventsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        // $events = Event::orderBy('created_At','asc')->get();
         $events = Event::orderBy('created_At','asc')->take(5)->get();
         // $events = Event::orderBy('created_At','asc')->paginate(5);
         return view('events.index')->with('events', $events);
     }
-
     
     /**
      * Show the form for creating a new resource.
@@ -41,15 +39,13 @@ class EventsController extends Controller
     {
         return view('events.create');
     }
-
     
     public function search(Request $request) 
     {
         $event = new Event;
-        // $event->date = $request->input('date');
         $event->city = $request->input('city');
         $events = Event::where('event_city', $event)->orderBy('created_At','asc')->take(5)->get();
-        return view('events.index')->wth('event', $events);
+        return view('events.index')->with('event', $events);
     }
     
     /**

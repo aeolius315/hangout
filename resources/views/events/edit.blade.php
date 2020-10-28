@@ -32,12 +32,11 @@
             {{Form::label('body', 'Body')}}
             {{Form::textarea('body', $event->body, ['class' => 'form-control', 'placeholder' => 'Body' ])}}
         </div>
-        {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
-        <div class="form-group">
+        {{-- <div class="form-group">
             {{Form::label('event_image', 'Select the file to upload. ')}}
             {{Form::open(array('url' => '/uploadfile','files'=>'true'))}}
             {{Form::file('event_image')}}
-        </div>
+        </div> --}}
         {{Form::submit('Submit', ['class' => 'mb-2 mt-2 btn btn-primary'])}}
     {{ Form::close() }}
 @endsection

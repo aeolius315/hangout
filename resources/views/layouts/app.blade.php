@@ -15,17 +15,22 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <style>
-            .home-body{
-                background-image: url("{{URL::asset('storage/images/bg1.jpg')}}");
+            .masthead{
+                min-height: 30rem;
+                position: relative;
+                background: url("{{URL::asset('storage/images/bg1.jpg')}}");
                 background-repeat: no-repeat;
                 background-size: cover;
+                height:auto;
+                width:100%;
             }
             .welcome{
                 padding: 200px 0;
-                text-align: center; 
+                text-align: center;
+                background-color: #ffffff1a;
             }
             .welcome-message{
-                text-shadow: 2px 2px #000000;
+                text-shadow: 7px 7px #ffffff60;
             }
             a.btn-lg{
                 width: 15%;
@@ -33,14 +38,10 @@
             }
         </style>
     </head>
-    <body>
-        <div id="app">
-            @include('inc.navbar')
-            <div class="container main">
-                @include('inc.messages')
-                @yield('content')
-            </div>
-        </div>
+    <body id="app">
+        @include('inc.navbar')
+        @include('inc.messages')
+        @yield('content')
         {{-- @include('inc.footer') --}}
     </body>
 </html>

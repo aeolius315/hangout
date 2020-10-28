@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/', [PagesController::class,'index']);
-Route::get('/about', [PagesController::class,'about']);
+Route::get('/events?', [EventsController::class,'search']);
 
 Route::resource('/events', EventsController::class);
 

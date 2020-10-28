@@ -13,10 +13,7 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
-<<<<<<< HEAD
-=======
 	"mmanos/laravel-search": "dev-master",
->>>>>>> a423e430... To Do:
         "laravel/tinker": "^2.0",
         "laravel/ui": "^3.0",
         "laravelcollective/html": "^6.2"
