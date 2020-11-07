@@ -28,3 +28,9 @@ Route::resource('/events', EventsController::class);
 Auth::routes();
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/contacts', function(){
+    return view('pages.contacts');
+});
+Route::get('/about', function(){
+    return view('pages.about');
+});

@@ -36,12 +36,19 @@
                 width: 15%;
                 padding: 10px;
             }
+            /* .about{
+                width: 300px;
+                height: 100px;
+            } */
+            #about1{
+                background: url("{{URL::asset('storage/images/about1.jpg')}}");
+            }
         </style>
     </head>
     <body id="app">
         @include('inc.navbar')
         @include('inc.messages')
         @yield('content')
-        {{-- @include('inc.footer') --}}
+        @include('inc.footer')
     </body>
 </html>

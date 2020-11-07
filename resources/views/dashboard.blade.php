@@ -21,6 +21,7 @@
                                 <th>Date & Time</th>
                                 <th>City</th>
                                 <th></th>
+                                <th></th>
                             </tr>
                             </thead>
                             @foreach ($events as $event)
@@ -29,7 +30,11 @@
                                     <td>{{$event->event_date}} {{$event->event_time}}</td>
                                     <td>{{$event->event_city}}</td>
                                     <td><a href="/events/{{$event->id}}/edit" class="btn btn-secondary float-right">Edit</a></td>
-                                    {{-- <th><a href="/events/{{$event->id}}" class="btn btn-danger float-right">Delete</a></th> --}}  
+                                    <td>
+                                        {{Form::open(array('url' => ['/events', $event->id], 'method' => 'DELETE', 'class' => 'float-right')) }}
+                                        {{Form::submit('Delete', ['class' => 'btn btn-danger float-right'])}}
+                                        {{Form::close() }}
+                                    </td>  
                                 </tr>     
                             @endforeach
                         </table>

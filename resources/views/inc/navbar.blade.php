@@ -12,6 +12,8 @@
           <ul class="nav navbar-nav  mr-auto">
             <li><a class="nav-link" href="/">Home</a></li>
             <li><a class="nav-link" href="/events">Events</a></li>
+            <li><a class="nav-link" href="/contacts">Contacts</a></li>
+            <li><a class="nav-link" href="/about">About</a></li>
           </ul>
 
           <!-- Right Side Of Navbar -->
