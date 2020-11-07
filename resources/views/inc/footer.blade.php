@@ -1,5 +1,6 @@
 <!-- Footer -->
 <footer class="footer bg-light">
+  <hr>
   <div class="container">
     <div class="row">
       <div class="col h-100">
